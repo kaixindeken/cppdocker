@@ -2,7 +2,6 @@
 // docker.hpp
 // cpp_docker
 //
-// created by changkun at shiyanlou.com
 // 
 
 #include <sys/wait.h>   // waitpid
@@ -122,8 +121,8 @@ namespace docker {
             this->config = config;
         }
         void start() {
-            char veth1buf[IFNAMSIZ] = "shiyanlou0X";
-            char veth2buf[IFNAMSIZ] = "shiyanlou0X";
+            char veth1buf[IFNAMSIZ] = "kaixindeken0X";
+            char veth2buf[IFNAMSIZ] = "kaixindeken0X";
             // 创建一对网络设备, 一个用于加载到宿主机, 另一个用于转移到子进程容器中
             veth1 = lxc_mkifname(veth1buf); // lxc_mkifname 这个 API 在网络设备名字后面至少需要添加一个 "X" 
             veth2 = lxc_mkifname(veth2buf); // 用于保证网络设备的正确创建, 详见 network.c 中对 lxc_mkifname 的实现

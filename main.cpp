@@ -2,7 +2,6 @@
 // main.cpp
 // cpp_docker
 //
-// created by changkun at shiyanlou.com
 // 
 
 #include "docker.hpp"
@@ -11,8 +10,8 @@
 int main(int argc, char** argv) {
     std::cout << "...start container" << std::endl;
     docker::container_config config;
-    config.host_name = "shiyanlou";
-    config.root_dir  = "./shiyanlou";
+    config.host_name = "kaixindeken";
+    config.root_dir  = "./kaixindeken";
     config.ip        = "192.168.0.100";
     config.bridge_name = "docker0";
     config.bridge_ip   = "192.168.0.1";
